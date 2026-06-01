@@ -17,7 +17,7 @@
   - *Aceptación:* contraste correcto sobre fondo oscuro.
 - [x] **`perf/remove-splash`** — Quitar `setTimeout(2000)` del splash (o reducir a transición no bloqueante).
   - *Aceptación:* el contenido (Hero) es visible de inmediato; mejora de LCP/FCP.
-- [ ] **`feat/prerender`** — Añadir prerender estático (vite-react-ssg).
+- [x] **`feat/prerender`** — Añadir prerender estático (vite-react-ssg).
   - *Aceptación:* el HTML de producción contiene el contenido sin ejecutar JS.
 - [x] **`feat/seo-head`** — `lang="es-MX"`, `<title>` real, meta description, Open Graph/Twitter, canonical, favicon propio, `robots.txt`, `sitemap.xml`, JSON-LD `Psychologist` + `AggregateRating`.
   - *Aceptación:* validación en Rich Results Test sin errores; OG se ve bien al compartir por WhatsApp.

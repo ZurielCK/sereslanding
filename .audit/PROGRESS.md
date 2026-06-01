@@ -66,4 +66,11 @@
 - Notas: canonical, og:url, sitemap y JSON-LD usan placeholder `DOMINIO` — reemplazar con el dominio real antes de lanzar. Lint y build pasan.
 - Siguiente: `feat/prerender` (vite-react-ssg) o `feat/google-reviews` — según disponibilidad de la API key de Google Places.
 
+## 2026-06-01 — feat/prerender
+
+- Rama: `feat/prerender` · PR: pendiente · Estado: listo para merge
+- Hecho: instalado `vite-react-ssg` + `react-router-dom` (peer dep requerida). Actualizado `main.jsx` para exportar `createRoot` vía `ViteReactSSG` con ruta `{ path: '/', element: <App /> }`. Script `build` en `package.json` actualizado a `vite-react-ssg build`. Añadido `.vite-react-ssg-temp` a `.gitignore`. El `dist/index.html` generado pesa 34 KB y contiene 8 elementos estructurales con contenido real (sin depender de JS para renderizar).
+- Notas: `npm run dev` sigue usando Vite normal — vite-react-ssg sólo actúa en build. Lint y build pasan.
+- Siguiente: `chore/images` — reemplazar imágenes de Unsplash por archivos locales.
+
 <!-- nuevas entradas debajo de esta línea -->
