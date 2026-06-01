@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 const testimonials = [
@@ -40,16 +40,16 @@ export default function Testimonials() {
   const timerRef = useRef(null)
   const touchStartX = useRef(0)
 
-  const go = (index) => {
+  const go = useCallback((index) => {
     const n = (index + testimonials.length) % testimonials.length
     setDirection(n > current ? 1 : -1)
     setCurrent(n)
-  }
+  }, [current])
 
   useEffect(() => {
     timerRef.current = setInterval(() => go(current + 1), 5000)
     return () => clearInterval(timerRef.current)
-  }, [current])
+  }, [current, go])
 
   const variants = {
     enter: (d) => ({ opacity: 0, x: d > 0 ? 60 : -60 }),

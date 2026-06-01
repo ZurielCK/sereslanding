@@ -54,7 +54,8 @@ export default function Services() {
     setCur(Math.max(0, Math.min(n, pages - 1)))
   }, [pages])
 
-  // Resetear posición al cambiar tamaño de ventana
+  // Resetear posición al cambiar tamaño de ventana — setState en effect es intencional aquí
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { setCur(0) }, [perView])
 
   return (
