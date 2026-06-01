@@ -11,7 +11,7 @@
   - *Aceptación:* la paleta se ve aplicada en todas las secciones; sin `var()` sin declarar.
 - [x] **`feat/fonts`** — Cargar "Cormorant Garamond" (`@fontsource/cormorant-garamond` o `<link>` con `display=swap` + `preconnect`).
   - *Aceptación:* los títulos usan la fuente correcta; sin FOUT notable.
-- [ ] **`fix/logo-case`** — Unificar el nombre del logo (`Logo.png` ↔ import). Verificar en `npm run build`.
+- [x] **`fix/logo-case`** — Unificar el nombre del logo (`Logo.png` ↔ import). Verificar en `npm run build`.
   - *Aceptación:* el build pasa en Linux; el logo se ve en Navbar y SplashScreen.
 - [ ] **`fix/navbar-colors`** — Corregir `color: "green"` → blanco en botón "Agendar" y toggle móvil.
   - *Aceptación:* contraste correcto sobre fondo oscuro.

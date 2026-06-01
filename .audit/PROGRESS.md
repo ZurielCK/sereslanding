@@ -38,4 +38,11 @@
 - Notas: sin FOUT ya que la fuente se carga como asset estático. Lint y build pasan.
 - Siguiente: `fix/logo-case` — corregir import Logo.png.
 
+## 2026-06-01 — fix/logo-case
+
+- Rama: `fix/logo-case` · PR: pendiente · Estado: listo para merge
+- Hecho: corregido import en `Navbar.jsx` y `SplashScreen.jsx` de `logo.png` a `Logo.png` (coincide con el archivo real). El build confirma el asset como `Logo-*.png` — ya no fallará en Linux/Cloudflare.
+- Notas: en Windows el bug era silencioso (FS case-insensitive). Lint y build pasan.
+- Siguiente: `fix/navbar-colors` — corregir color:green en CTA y hamburguesa.
+
 <!-- nuevas entradas debajo de esta línea -->

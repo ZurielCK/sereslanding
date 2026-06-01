@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { FaBars, FaTimes } from "react-icons/fa"
-import logo from "../assets/images/logo.png"
+import logo from "../assets/images/Logo.png"
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
