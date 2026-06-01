@@ -9,7 +9,7 @@
 
 - [x] **`fix/css-variables`** — Definir `--color-deep/cream/warm/muted` en `@theme` (Tailwind 4) o `:root`. Borrar `App.css` (boilerplate muerto, ni se importa).
   - *Aceptación:* la paleta se ve aplicada en todas las secciones; sin `var()` sin declarar.
-- [ ] **`feat/fonts`** — Cargar "Cormorant Garamond" (`@fontsource/cormorant-garamond` o `<link>` con `display=swap` + `preconnect`).
+- [x] **`feat/fonts`** — Cargar "Cormorant Garamond" (`@fontsource/cormorant-garamond` o `<link>` con `display=swap` + `preconnect`).
   - *Aceptación:* los títulos usan la fuente correcta; sin FOUT notable.
 - [ ] **`fix/logo-case`** — Unificar el nombre del logo (`Logo.png` ↔ import). Verificar en `npm run build`.
   - *Aceptación:* el build pasa en Linux; el logo se ve en Navbar y SplashScreen.

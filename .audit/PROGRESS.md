@@ -31,4 +31,11 @@
 - Notas: colores derivados de valores hardcodeados en el código (`rgba(44,62,45)` → deep, `#E8DDD0` → warm). Lint y build pasan.
 - Siguiente: `feat/fonts` — cargar Cormorant Garamond.
 
+## 2026-06-01 — feat/fonts
+
+- Rama: `feat/fonts` · PR: pendiente · Estado: listo para merge
+- Hecho: instalado `@fontsource/cormorant-garamond`; importados pesos 300, 300-italic, 500, 500-italic en `main.jsx`. La fuente se sirve localmente (sin dependencia de Google Fonts en runtime). Los archivos `.woff` quedan bundleados en el build.
+- Notas: sin FOUT ya que la fuente se carga como asset estático. Lint y build pasan.
+- Siguiente: `fix/logo-case` — corregir import Logo.png.
+
 <!-- nuevas entradas debajo de esta línea -->
