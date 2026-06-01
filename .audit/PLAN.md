@@ -15,7 +15,7 @@
   - *Aceptación:* el build pasa en Linux; el logo se ve en Navbar y SplashScreen.
 - [x] **`fix/navbar-colors`** — Corregir `color: "green"` → blanco en botón "Agendar" y toggle móvil.
   - *Aceptación:* contraste correcto sobre fondo oscuro.
-- [ ] **`perf/remove-splash`** — Quitar `setTimeout(2000)` del splash (o reducir a transición no bloqueante).
+- [x] **`perf/remove-splash`** — Quitar `setTimeout(2000)` del splash (o reducir a transición no bloqueante).
   - *Aceptación:* el contenido (Hero) es visible de inmediato; mejora de LCP/FCP.
 - [ ] **`feat/prerender`** — Añadir prerender estático (vite-react-ssg).
   - *Aceptación:* el HTML de producción contiene el contenido sin ejecutar JS.

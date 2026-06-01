@@ -52,4 +52,11 @@
 - Notas: typos de CSS que pasaban en dev porque el navegador acepta nombres de color ingleses; en producción generaban contraste pobre o incorrecto. Lint y build pasan.
 - Siguiente: `perf/remove-splash` — quitar setTimeout(2000) bloqueante.
 
+## 2026-06-01 — perf/remove-splash
+
+- Rama: `perf/remove-splash` · PR: pendiente · Estado: listo para merge
+- Hecho: eliminado `useState(loading)`, `useEffect(setTimeout)` y la condición `if (loading) return <SplashScreen/>` de `App.jsx`. Eliminado el import de `SplashScreen` y de `useState/useEffect`. El Hero es ahora visible de inmediato — mejora directa de LCP y FCP. El componente `SplashScreen.jsx` se conserva en el repo por si se quiere reutilizar con animación no bloqueante en el futuro.
+- Notas: CLAUDE.md prohíbe explícitamente reintroducir cualquier splash bloqueante. Lint y build pasan.
+- Siguiente: `feat/seo-head` — SEO técnico completo en index.html.
+
 <!-- nuevas entradas debajo de esta línea -->
