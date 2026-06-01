@@ -67,7 +67,7 @@ export default function Navbar() {
           className="hidden md:inline-flex items-center gap-3 px-6 py-3 text-s tracking-widest uppercase"
           style={{
             backgroundColor: "var(--color-deep)",
-            color: "green",
+            color: "white",
             letterSpacing: "0.14em",
           }}
         >
@@ -80,7 +80,7 @@ export default function Navbar() {
         {/* Botón móvil */}
         <button
           className="md:hidden text-xl"
-          style={{ color: "green" }}
+          style={{ color: "var(--color-deep)" }}
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <FaTimes /> : <FaBars />}

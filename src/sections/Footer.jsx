@@ -52,6 +52,7 @@ export default function Footer() {
           <a
             href="https://g.page/r/CXYnQ4kSgsS1EAE/review"
             target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-3 mt-4 text-gray-400 hover:text-white transition"
           >
             <FaMapMarkerAlt />
@@ -63,7 +64,7 @@ export default function Footer() {
           <div className="flex gap-4 mt-6 text-2xl">
         
             <a
-              href="https://www.instagram.com/seres_consenti2?fbclid=IwY2xjawQa7MlleHRuA2FlbQIxMABicmlkETFwSjRldVo4NW1EWWY0M3hMc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHg4hf7t_x8TRwa7znonXDB3xvYWsQ7iZv0hNcvJ1a0EMaiCSBDEe4bVMTZo2_aem_I3sq-1bAXTYf_SXbE3O6rA"
+              href="https://www.instagram.com/seres_consenti2"
               className="hover:text-pink-400 transition"
               target="_blank"
               rel="noopener noreferrer"

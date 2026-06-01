@@ -13,7 +13,7 @@
   - *Aceptación:* los títulos usan la fuente correcta; sin FOUT notable.
 - [x] **`fix/logo-case`** — Unificar el nombre del logo (`Logo.png` ↔ import). Verificar en `npm run build`.
   - *Aceptación:* el build pasa en Linux; el logo se ve en Navbar y SplashScreen.
-- [ ] **`fix/navbar-colors`** — Corregir `color: "green"` → blanco en botón "Agendar" y toggle móvil.
+- [x] **`fix/navbar-colors`** — Corregir `color: "green"` → blanco en botón "Agendar" y toggle móvil.
   - *Aceptación:* contraste correcto sobre fondo oscuro.
 - [ ] **`perf/remove-splash`** — Quitar `setTimeout(2000)` del splash (o reducir a transición no bloqueante).
   - *Aceptación:* el contenido (Hero) es visible de inmediato; mejora de LCP/FCP.

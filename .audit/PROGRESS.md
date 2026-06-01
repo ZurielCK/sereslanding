@@ -45,4 +45,11 @@
 - Notas: en Windows el bug era silencioso (FS case-insensitive). Lint y build pasan.
 - Siguiente: `fix/navbar-colors` — corregir color:green en CTA y hamburguesa.
 
+## 2026-06-01 — fix/navbar-colors
+
+- Rama: `fix/navbar-colors` · PR: pendiente · Estado: listo para merge
+- Hecho: corregido `color: "green"` → `"white"` en CTA desktop del Navbar; corregido `color: "green"` → `"var(--color-deep)"` en botón hamburguesa móvil. Adicionalmente: añadido `rel="noopener noreferrer"` al enlace de Google Maps en Footer (fix de seguridad); limpiada URL de Instagram (quitados parámetros fbclid de tracking).
+- Notas: typos de CSS que pasaban en dev porque el navegador acepta nombres de color ingleses; en producción generaban contraste pobre o incorrecto. Lint y build pasan.
+- Siguiente: `perf/remove-splash` — quitar setTimeout(2000) bloqueante.
+
 <!-- nuevas entradas debajo de esta línea -->
