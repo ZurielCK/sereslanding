@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef, useCallback } from "react"
-import { motion } from "framer-motion"
+import { useState, useEffect, useRef, useCallback } from "react";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -26,42 +26,50 @@ const services = [
     text: "Desarrolla herramientas para mejorar tu bienestar emocional y tu vida diaria.",
     img: "https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=700&q=80",
   },
-]
+];
 
 function usePerView(ref) {
-  const [perView, setPerView] = useState(1)
+  const [perView, setPerView] = useState(1);
   useEffect(() => {
     const calc = () => {
-      if (!ref.current) return
-      const w = ref.current.offsetWidth
-      setPerView(w >= 900 ? 3 : w >= 580 ? 2 : 1)
-    }
-    calc()
-    window.addEventListener("resize", calc)
-    return () => window.removeEventListener("resize", calc)
-  }, [ref])
-  return perView
+      if (!ref.current) return;
+      const w = ref.current.offsetWidth;
+      setPerView(w >= 900 ? 3 : w >= 580 ? 2 : 1);
+    };
+    calc();
+    window.addEventListener("resize", calc);
+    return () => window.removeEventListener("resize", calc);
+  }, [ref]);
+  return perView;
 }
 
 export default function Services() {
-  const [cur, setCur] = useState(0)
-  const wrapRef = useRef(null)
-  const touchX = useRef(0)
-  const perView = usePerView(wrapRef)
-  const pages = services.length - perView + 1
+  const [cur, setCur] = useState(0);
+  const wrapRef = useRef(null);
+  const touchX = useRef(0);
+  const perView = usePerView(wrapRef);
+  const pages = services.length - perView + 1;
 
-  const go = useCallback((n) => {
-    setCur(Math.max(0, Math.min(n, pages - 1)))
-  }, [pages])
+  const go = useCallback(
+    (n) => {
+      setCur(Math.max(0, Math.min(n, pages - 1)));
+    },
+    [pages],
+  );
 
   // Resetear posición al cambiar tamaño de ventana — setState en effect es intencional aquí
-  // eslint-disable-next-line react-hooks/set-state-in-effect
-  useEffect(() => { setCur(0) }, [perView])
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setCur(0);
+  }, [perView]);
 
   return (
-    <section id="servicios" className="py-24" style={{ backgroundColor: "var(--color-cream)" }}>
+    <section
+      id="servicios"
+      className="py-15"
+      style={{ backgroundColor: "var(--color-cream)" }}
+    >
       <div className="max-w-6xl mx-auto px-6">
-
         {/* Encabezado */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -70,27 +78,40 @@ export default function Services() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <p className="text-xs tracking-[.22em] uppercase mb-3" style={{ color: "#8A9E7C" }}>
+          <p
+            className="text-xs tracking-[.22em] uppercase mb-3"
+            style={{ color: "#8A9E7C" }}
+          >
             Servicios terapéuticos
           </p>
           <h2
             className="text-5xl mb-4"
-            style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, color: "var(--color-deep)", lineHeight: 1.1 }}
+            style={{
+              fontFamily: "Cormorant Garamond, serif",
+              fontWeight: 300,
+              color: "var(--color-deep)",
+              lineHeight: 1.1,
+            }}
           >
             ¿En qué puedo{" "}
             <em style={{ fontStyle: "italic", color: "#8A9E7C" }}>ayudarte?</em>
           </h2>
-          <p className="text-sm font-light" style={{ color: "var(--color-muted)" }}>
+          <p
+            className="text-sm font-light"
+            style={{ color: "var(--color-muted)" }}
+          >
             Acompañamiento profesional para tu bienestar emocional
           </p>
         </motion.div>
 
         {/* Slider */}
-        <div ref={wrapRef} className="overflow-hidden"
+        <div
+          ref={wrapRef}
+          className="overflow-hidden"
           onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
           onTouchEnd={(e) => {
-            const dx = e.changedTouches[0].clientX - touchX.current
-            if (Math.abs(dx) > 40) go(dx < 0 ? cur + 1 : cur - 1)
+            const dx = e.changedTouches[0].clientX - touchX.current;
+            if (Math.abs(dx) > 40) go(dx < 0 ? cur + 1 : cur - 1);
           }}
         >
           <div
@@ -112,7 +133,10 @@ export default function Services() {
                   transition={{ duration: 0.5, delay: i * 0.08 }}
                   viewport={{ once: true }}
                   className="group relative border overflow-hidden h-full"
-                  style={{ borderColor: "var(--color-warm)", backgroundColor: "white" }}
+                  style={{
+                    borderColor: "var(--color-warm)",
+                    backgroundColor: "white",
+                  }}
                 >
                   {/* Imagen */}
                   <div className="relative h-52 overflow-hidden">
@@ -127,7 +151,10 @@ export default function Services() {
                     />
                     <span
                       className="absolute top-3 left-4 text-sm"
-                      style={{ fontFamily: "Cormorant Garamond, serif", color: "rgba(255,255,255,0.75)" }}
+                      style={{
+                        fontFamily: "Cormorant Garamond, serif",
+                        color: "rgba(255,255,255,0.75)",
+                      }}
                     >
                       {s.num}
                     </span>
@@ -135,23 +162,40 @@ export default function Services() {
 
                   {/* Cuerpo */}
                   <div className="p-5">
-                    <p className="text-xs tracking-widest uppercase mb-2" style={{ color: "#8A9E7C" }}>
+                    <p
+                      className="text-xs tracking-widest uppercase mb-2"
+                      style={{ color: "#8A9E7C" }}
+                    >
                       Área de atención
                     </p>
                     <h3
                       className="text-xl mb-3"
-                      style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 500, color: "var(--color-deep)" }}
+                      style={{
+                        fontFamily: "Cormorant Garamond, serif",
+                        fontWeight: 500,
+                        color: "var(--color-deep)",
+                      }}
                     >
                       {s.title}
                     </h3>
-                    <p className="text-sm leading-relaxed font-light mb-4" style={{ color: "var(--color-muted)" }}>
+                    <p
+                      className="text-sm leading-relaxed font-light mb-4"
+                      style={{ color: "var(--color-muted)" }}
+                    >
                       {s.text}
                     </p>
-                    <div className="flex items-center gap-2 text-xs tracking-widest uppercase" style={{ color: "#8A9E7C" }}>
+                    <div
+                      className="flex items-center gap-2 text-xs tracking-widest uppercase"
+                      style={{ color: "#8A9E7C" }}
+                    >
                       <span>Saber más</span>
                       <svg
-                        width="13" height="13" viewBox="0 0 24 24"
-                        fill="none" stroke="#8A9E7C" strokeWidth="1.8"
+                        width="13"
+                        height="13"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#8A9E7C"
+                        strokeWidth="1.8"
                         className="transition-transform duration-200 group-hover:translate-x-1"
                       >
                         <path d="M5 12h14M12 5l7 7-7 7" />
@@ -179,7 +223,14 @@ export default function Services() {
             style={{ borderColor: "#D0D0D0" }}
             aria-label="Anterior"
           >
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+            >
               <path d="M15 18l-6-6 6-6" />
             </svg>
           </button>
@@ -206,13 +257,19 @@ export default function Services() {
             style={{ borderColor: "#D0D0D0" }}
             aria-label="Siguiente"
           >
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+            >
               <path d="M9 18l6-6-6-6" />
             </svg>
           </button>
         </div>
-
       </div>
     </section>
-  )
+  );
 }

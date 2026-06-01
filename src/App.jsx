@@ -19,9 +19,7 @@ export default function App() {
       <Education />
       <Testimonials />
       <CTA />
-
       <Footer />
-
       <WhatsAppButton />
     </>
   );

@@ -59,4 +59,11 @@
 - Notas: CLAUDE.md prohíbe explícitamente reintroducir cualquier splash bloqueante. Lint y build pasan.
 - Siguiente: `feat/seo-head` — SEO técnico completo en index.html.
 
+## 2026-06-01 — feat/seo-head
+
+- Rama: `feat/seo-head` · PR: pendiente · Estado: listo para merge
+- Hecho: `lang="es-MX"` en `<html>`; `<title>` real orientado a búsqueda local; `meta description` 150 chars; Open Graph completo (og:type, og:url, og:title, og:description, og:image, og:locale, og:site_name); Twitter Card summary_large_image; `<link rel="canonical">`; favicon propio (`public/favicon.png` desde Logo.png); JSON-LD `Psychologist + LocalBusiness` con nombre, teléfono, dirección, coordenadas, sameAs y hasOfferCatalog; `public/robots.txt`; `public/sitemap.xml`. AggregateRating se añadirá en `feat/google-reviews` con datos reales.
+- Notas: canonical, og:url, sitemap y JSON-LD usan placeholder `DOMINIO` — reemplazar con el dominio real antes de lanzar. Lint y build pasan.
+- Siguiente: `feat/prerender` (vite-react-ssg) o `feat/google-reviews` — según disponibilidad de la API key de Google Places.
+
 <!-- nuevas entradas debajo de esta línea -->

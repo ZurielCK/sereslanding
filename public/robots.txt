@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: reemplaza DOMINIO por el dominio real antes de lanzar
+Sitemap: https://DOMINIO/sitemap.xml

@@ -1,15 +1,14 @@
-import { motion } from "framer-motion"
-import terap from "../assets/images/terapia.png"
+import { motion } from "framer-motion";
+import terap from "../assets/images/terapia.png";
 
 export default function Hero() {
   return (
     <section
       id="inicio"
-      className="pt-32 pb-20"
+      className="pt-32 pb-5"
       style={{ backgroundColor: "var(--color-cream)" }}
     >
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-
         {/* Texto */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -40,7 +39,10 @@ export default function Hero() {
           </h1>
 
           {/* Línea decorativa */}
-          <div className="w-10 h-px mb-6" style={{ backgroundColor: "#8A9E7C" }} />
+          <div
+            className="w-10 h-px mb-6"
+            style={{ backgroundColor: "#8A9E7C" }}
+          />
 
           <p
             className="text-sm md:text-base leading-relaxed font-light mb-8"
@@ -66,7 +68,14 @@ export default function Hero() {
               }}
             >
               Agendar consulta
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+              >
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </motion.a>
@@ -121,7 +130,10 @@ export default function Hero() {
               borderLeft: "3px solid #8A9E7C",
             }}
           >
-            <p className="text-xs tracking-widest uppercase mb-1" style={{ color: "#8A9E7C" }}>
+            <p
+              className="text-xs tracking-widest uppercase mb-1"
+              style={{ color: "#8A9E7C" }}
+            >
               Atención personalizada
             </p>
             <p className="text-sm" style={{ color: "var(--color-deep)" }}>
@@ -129,8 +141,7 @@ export default function Hero() {
             </p>
           </div>
         </motion.div>
-
       </div>
     </section>
-  )
+  );
 }

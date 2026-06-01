@@ -1,9 +1,8 @@
-import logo from "../assets/images/Logo.png"
+import logo from "../assets/images/Logo.png";
 
 export default function SplashScreen() {
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-white to-[#e8f7fb] z-[999]">
-
       {/* Logo */}
 
       <img
@@ -21,7 +20,6 @@ export default function SplashScreen() {
       {/* Loader */}
 
       <div className="mt-8 w-10 h-10 border-4 border-[#11b8d6] border-t-transparent rounded-full animate-spin"></div>
-
     </div>
-  )
+  );
 }

@@ -1,10 +1,90 @@
 <!doctype html>
-<html lang="en">
+<html lang="es-MX">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>psicologa-landing</title>
+
+    <!-- ═══════════════════════════════════════════
+         FAVICON
+         ═══════════════════════════════════════════ -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <!-- ═══════════════════════════════════════════
+         SEO BÁSICO
+         TODO: reemplaza DOMINIO por el dominio real antes de lanzar
+         ═══════════════════════════════════════════ -->
+    <title>Psicóloga en Cuernavaca · Terapia para ansiedad — SerEs Psicoterapia</title>
+    <meta
+      name="description"
+      content="Psicoterapia profesional en Cuernavaca, Morelos. Especialista en ansiedad, terapia individual y de pareja. Consulta presencial y en línea. Agenda tu primera sesión."
+    />
+    <link rel="canonical" href="https://DOMINIO/" />
+
+    <!-- ═══════════════════════════════════════════
+         OPEN GRAPH (WhatsApp / redes sociales)
+         ═══════════════════════════════════════════ -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://DOMINIO/" />
+    <meta property="og:locale"      content="es_MX" />
+    <meta property="og:site_name"   content="SerEs Psicoterapia Corporal Humanista" />
+    <meta property="og:title"       content="Psicóloga en Cuernavaca · SerEs Psicoterapia" />
+    <meta property="og:description" content="Psicoterapia profesional en Cuernavaca. Especialista en ansiedad, terapia individual y de pareja. Presencial y en línea." />
+    <meta property="og:image"       content="https://DOMINIO/og-image.jpg" />
+    <meta property="og:image:width"  content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- ═══════════════════════════════════════════
+         TWITTER CARD
+         ═══════════════════════════════════════════ -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="Psicóloga en Cuernavaca · SerEs Psicoterapia" />
+    <meta name="twitter:description" content="Psicoterapia profesional en Cuernavaca. Especialista en ansiedad, terapia individual y de pareja. Presencial y en línea." />
+    <meta name="twitter:image"       content="https://DOMINIO/og-image.jpg" />
+
+    <!-- ═══════════════════════════════════════════
+         JSON-LD — Psychologist (LocalBusiness)
+         AggregateRating se añadirá en feat/google-reviews
+         con datos reales de la API de Google Places.
+         ═══════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Psychologist", "LocalBusiness"],
+      "@id": "https://DOMINIO/#negocio",
+      "name": "SerEs Psicoterapia Corporal Humanista",
+      "url": "https://DOMINIO/",
+      "telephone": "+527777891025",
+      "image": "https://DOMINIO/favicon.png",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cuernavaca",
+        "addressRegion": "Morelos",
+        "addressCountry": "MX"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 18.9090,
+        "longitude": -99.2313
+      },
+      "sameAs": [
+        "https://www.instagram.com/seres_consenti2",
+        "https://www.facebook.com/seres.psicoterapia",
+        "https://g.page/r/CXYnQ4kSgsS1EAE/review"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Psicoterapia",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Terapia individual" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Terapia de pareja" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manejo de ansiedad y estrés" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Crecimiento personal" } }
+        ]
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
