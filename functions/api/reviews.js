@@ -13,7 +13,7 @@
 const PLACE_ID   = "ChIJ1Su43dXfzYURdidDiRKCxLU";
 const REVIEW_URL = "https://g.page/r/CXYnQ4kSgsS1EAE/review";
 const CACHE_KEY  = "gbp_reviews";
-const CACHE_TTL  = 60 * 60 * 24; // 24 horas en segundos
+const CACHE_TTL  = 60 * 60 * 6; // 6 horas en segundos
 
 const CORS = {
   "Content-Type": "application/json",

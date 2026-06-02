@@ -1,126 +1,28 @@
 import { useState, useEffect, useRef, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { FaStar, FaGoogle } from "react-icons/fa"
+import { FaStar, FaGoogle, FaQuoteLeft } from "react-icons/fa"
 
 const REVIEW_LINK = "https://g.page/r/CXYnQ4kSgsS1EAE/review"
 
-function StarRating({ rating = 5, size = 13 }) {
+function Stars({ rating = 5, size = 13 }) {
   return (
-    <div className="flex gap-1 mb-4" aria-label={`${rating} de 5 estrellas`}>
+    <div className="flex gap-1" aria-label={`${rating} de 5 estrellas`}>
       {[...Array(5)].map((_, i) => (
-        <FaStar
-          key={i}
-          size={size}
-          style={{ color: i < Math.round(rating) ? "#8A9E7C" : "#D0D0D0" }}
-        />
+        <FaStar key={i} size={size} style={{ color: i < Math.round(rating) ? "#8A9E7C" : "#D0D0D0" }} />
       ))}
     </div>
   )
 }
 
-function ReviewCard({ review, direction, variants }) {
-  return (
-    <motion.div
-      key={review.authorName + review.publishTime}
-      custom={direction}
-      variants={variants}
-      initial="enter"
-      animate="center"
-      exit="exit"
-      transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-      className="relative border-l-2 p-8"
-      style={{
-        backgroundColor: "white",
-        borderLeftColor: "#8A9E7C",
-        borderRadius: "0 12px 12px 0",
-      }}
-    >
-      <StarRating rating={review.rating} />
-      <p
-        className="text-6xl leading-none mb-3 select-none"
-        style={{ fontFamily: "Cormorant Garamond, serif", color: "#B8C9AC" }}
-      >
-        "
-      </p>
-      <p className="text-sm leading-relaxed italic mb-6 font-light" style={{ color: "var(--color-muted)" }}>
-        {review.text}
-      </p>
-      <div className="flex items-center gap-3 pt-5 border-t" style={{ borderColor: "#E8DDD0" }}>
-        {review.authorPhoto ? (
-          <img
-            src={review.authorPhoto}
-            alt={review.authorName}
-            width="40"
-            height="40"
-            loading="lazy"
-            className="w-10 h-10 rounded-full object-cover flex-shrink-0"
-          />
-        ) : (
-          <div
-            className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0"
-            style={{ backgroundColor: "#E8DDD0", color: "var(--color-deep)" }}
-          >
-            {review.authorName[0]}
-          </div>
-        )}
-        <div>
-          <p
-            className="text-lg leading-none mb-1"
-            style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 500, color: "var(--color-deep)" }}
-          >
-            {review.authorName}
-          </p>
-          <p className="text-xs tracking-wider uppercase" style={{ color: "#8A9E7C" }}>
-            Reseña verificada · Google
-          </p>
-        </div>
-      </div>
-    </motion.div>
-  )
-}
-
-function RatingBadge({ rating, count }) {
-  return (
-    <div
-      className="inline-flex flex-col items-center gap-2 px-8 py-6 mb-8"
-      style={{ backgroundColor: "white", borderLeft: "3px solid #8A9E7C" }}
-    >
-      <div className="flex items-end gap-2">
-        <span
-          style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "3.5rem", fontWeight: 300, color: "var(--color-deep)", lineHeight: 1 }}
-        >
-          {rating?.toFixed(1) ?? "5.0"}
-        </span>
-        <div className="flex flex-col pb-1">
-          <StarRating rating={rating ?? 5} size={14} />
-          <span className="text-xs" style={{ color: "var(--color-muted)" }}>
-            {count ?? 0} reseña{count !== 1 ? "s" : ""} en Google
-          </span>
-        </div>
-      </div>
-      <a
-        href={REVIEW_LINK}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-2 text-xs tracking-widest uppercase mt-1 transition-opacity hover:opacity-70"
-        style={{ color: "#8A9E7C" }}
-      >
-        <FaGoogle size={11} />
-        Dejar una reseña
-      </a>
-    </div>
-  )
-}
-
-const variants = {
+const slideVariants = {
   enter: (d) => ({ opacity: 0, x: d > 0 ? 60 : -60 }),
   center: { opacity: 1, x: 0 },
   exit:  (d) => ({ opacity: 0, x: d > 0 ? -60 : 60 }),
 }
 
 export default function Testimonials() {
-  const [data, setData]         = useState(null)
-  const [current, setCurrent]   = useState(0)
+  const [data, setData]           = useState(null)
+  const [current, setCurrent]     = useState(0)
   const [direction, setDirection] = useState(1)
   const timerRef    = useRef(null)
   const touchStartX = useRef(0)
@@ -129,7 +31,7 @@ export default function Testimonials() {
     fetch("/api/reviews")
       .then((r) => r.json())
       .then(setData)
-      .catch(() => setData({ rating: 5, userRatingCount: 2, reviews: [] }))
+      .catch(() => setData({ rating: 5, userRatingCount: 3, reviews: [] }))
   }, [])
 
   const reviews = data?.reviews ?? []
@@ -152,6 +54,7 @@ export default function Testimonials() {
     <section className="py-24" style={{ backgroundColor: "var(--color-cream)" }}>
       <div className="max-w-2xl mx-auto px-6">
 
+        {/* Encabezado */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -174,14 +77,7 @@ export default function Testimonials() {
           </p>
         </motion.div>
 
-        {/* Rating agregado siempre visible */}
-        {data && (
-          <div className="flex justify-center">
-            <RatingBadge rating={data.rating} count={data.userRatingCount} />
-          </div>
-        )}
-
-        {/* Slider de reseñas — solo si la API devuelve texto */}
+        {/* ── CASO A: La API devuelve texto → carrusel completo ── */}
         {total > 0 && (
           <>
             <div
@@ -193,15 +89,64 @@ export default function Testimonials() {
               }}
             >
               <AnimatePresence custom={direction} mode="wait">
-                <ReviewCard
+                <motion.div
                   key={current}
-                  review={reviews[current]}
-                  direction={direction}
-                  variants={variants}
-                />
+                  custom={direction}
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                  className="relative border-l-2 p-8"
+                  style={{ backgroundColor: "white", borderLeftColor: "#8A9E7C", borderRadius: "0 12px 12px 0" }}
+                >
+                  <div className="mb-4">
+                    <Stars rating={reviews[current].rating} />
+                  </div>
+
+                  <FaQuoteLeft className="mb-3 opacity-20" style={{ color: "#8A9E7C", fontSize: "2rem" }} />
+
+                  <p className="text-sm leading-relaxed italic mb-6 font-light" style={{ color: "var(--color-muted)" }}>
+                    {reviews[current].text}
+                  </p>
+
+                  <div className="flex items-center gap-3 pt-5 border-t" style={{ borderColor: "#E8DDD0" }}>
+                    {reviews[current].authorPhoto ? (
+                      <img
+                        src={reviews[current].authorPhoto}
+                        alt={reviews[current].authorName}
+                        width="40" height="40"
+                        loading="lazy"
+                        className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                      />
+                    ) : (
+                      <div
+                        className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0"
+                        style={{ backgroundColor: "#E8DDD0", color: "var(--color-deep)" }}
+                      >
+                        {reviews[current].authorName[0]}
+                      </div>
+                    )}
+                    <div>
+                      <p
+                        className="text-lg leading-none mb-1"
+                        style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 500, color: "var(--color-deep)" }}
+                      >
+                        {reviews[current].authorName}
+                      </p>
+                      <div className="flex items-center gap-2">
+                        <FaGoogle size={10} style={{ color: "#8A9E7C" }} />
+                        <p className="text-xs tracking-wider uppercase" style={{ color: "#8A9E7C" }}>
+                          Reseña verificada · Google
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
               </AnimatePresence>
             </div>
 
+            {/* Controles de paginación */}
             {total > 1 && (
               <div className="flex items-center justify-center gap-4 mt-8">
                 <button
@@ -243,23 +188,71 @@ export default function Testimonials() {
           </>
         )}
 
-        {/* Estado sin reseñas visibles — invitar a dejar la primera */}
+        {/* ── CASO B: La API aún no devuelve texto → badge de rating + CTA ── */}
         {data && total === 0 && (
-          <div className="text-center mt-4">
-            <p className="text-sm font-light mb-4" style={{ color: "var(--color-muted)" }}>
-              Sé de los primeros en compartir tu experiencia.
-            </p>
+          <div className="flex flex-col items-center gap-6">
+
+            {/* Badge de rating grande */}
+            <div
+              className="flex items-center gap-6 px-10 py-7 w-full max-w-sm"
+              style={{ backgroundColor: "white", borderLeft: "3px solid #8A9E7C", borderRadius: "0 12px 12px 0" }}
+            >
+              <p
+                style={{
+                  fontFamily: "Cormorant Garamond, serif",
+                  fontSize: "4rem",
+                  fontWeight: 300,
+                  color: "var(--color-deep)",
+                  lineHeight: 1,
+                }}
+              >
+                {data.rating?.toFixed(1) ?? "5.0"}
+              </p>
+              <div>
+                <Stars rating={data.rating ?? 5} size={16} />
+                <p className="mt-2 text-sm" style={{ color: "var(--color-muted)" }}>
+                  {data.userRatingCount ?? 0} reseñas en Google
+                </p>
+                <div className="flex items-center gap-1 mt-1">
+                  <FaGoogle size={10} style={{ color: "#8A9E7C" }} />
+                  <span className="text-xs tracking-wider uppercase" style={{ color: "#8A9E7C" }}>
+                    Verificadas
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Invitación a dejar reseña */}
+            <div className="text-center">
+              <p className="text-sm font-light mb-4" style={{ color: "var(--color-muted)" }}>
+                ¿Ya tuviste una sesión? Tu experiencia puede ayudar a otros.
+              </p>
+              <a
+                href={REVIEW_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-7 py-3.5 text-xs tracking-widest uppercase transition-opacity hover:opacity-80"
+                style={{ backgroundColor: "var(--color-deep)", color: "white" }}
+              >
+                <FaGoogle />
+                Dejar reseña en Google
+              </a>
+            </div>
+          </div>
+        )}
+
+        {/* Enlace a todas las reseñas — siempre visible cuando hay datos */}
+        {data && (
+          <p className="text-center mt-8 text-xs" style={{ color: "var(--color-muted)" }}>
             <a
               href={REVIEW_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 text-xs tracking-widest uppercase transition-opacity hover:opacity-80"
-              style={{ backgroundColor: "var(--color-deep)", color: "white" }}
+              className="underline underline-offset-4 hover:opacity-70 transition-opacity"
             >
-              <FaGoogle />
-              Dejar reseña en Google
+              Ver todas las reseñas en Google Maps
             </a>
-          </div>
+          </p>
         )}
 
       </div>
