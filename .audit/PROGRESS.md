@@ -107,4 +107,13 @@
 - Hecho: build verificado (vite-react-ssg). Configuración de Cloudflare Pages lista en wrangler.toml. Instrucciones de deploy documentadas abajo.
 - Siguiente: conectar GitHub repo → Cloudflare Pages (manual en dashboard).
 
+## 2026-06-02 — MVP en producción
+
+- URL: **https://sereslanding.pages.dev/** · Estado: en vivo ✅
+- Deploy: Cloudflare Pages (fork ZurielCK/sereslanding, rama main)
+- Variable de entorno configurada: GOOGLE_PLACES_API_KEY (secret)
+- Pendiente: agregar KV namespace REVIEWS_KV para caché de reseñas
+- Pendiente: reemplazar placeholder DOMINIO por dominio real cuando se compre
+- Pendiente: reemplazar imágenes SVG placeholder de servicios por fotos reales
+
 <!-- nuevas entradas debajo de esta línea -->
