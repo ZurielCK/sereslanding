@@ -4,6 +4,42 @@ import { FaStar, FaGoogle, FaQuoteLeft } from "react-icons/fa"
 
 const REVIEW_LINK = "https://g.page/r/CXYnQ4kSgsS1EAE/review"
 
+// Testimonios con consentimiento de los pacientes.
+// Se muestran cuando la API de Google no devuelve texto de reseñas.
+// Cuando la API empiece a devolverlos, estos se reemplazan automáticamente.
+const FALLBACK_REVIEWS = [
+  {
+    authorName: "Ileana Villalobos",
+    authorColor: "bg-emerald-50 text-emerald-700",
+    rating: 5,
+    text: "Muy profesional, recomiendo ampliamente.",
+  },
+  {
+    authorName: "Adriana Vazquez",
+    authorColor: "bg-orange-50 text-orange-700",
+    rating: 5,
+    text: "Excelente Terapeuta, es muy profesional, nos ayudó mucho… 100% recomendable.",
+  },
+  {
+    authorName: "Lizbeth Benitez",
+    authorColor: "bg-violet-50 text-violet-700",
+    rating: 5,
+    text: "Quiero expresar mi agradecimiento y reconocimiento a SerEs Psicoterapia. Desde la primera sesión me sentí en un ambiente de confianza y empatía. Recomendada ampliamente.",
+  },
+  {
+    authorName: "Karim Ramirez",
+    authorColor: "bg-sky-50 text-sky-700",
+    rating: 5,
+    text: "La verdad una persona muy preparada, me ayudó a salir adelante de una situación problemática que tenía. Libre recomiendo.",
+  },
+  {
+    authorName: "Pamys Gonzalez",
+    authorColor: "bg-rose-50 text-rose-700",
+    rating: 5,
+    text: "Excelente atención, es muy profesional. Súper recomendable 😊",
+  },
+]
+
 function Stars({ rating = 5, size = 13 }) {
   return (
     <div className="flex gap-1" aria-label={`${rating} de 5 estrellas`}>
@@ -34,7 +70,8 @@ export default function Testimonials() {
       .catch(() => setData({ rating: 5, userRatingCount: 3, reviews: [] }))
   }, [])
 
-  const reviews = data?.reviews ?? []
+  // Usa reseñas reales de la API si están disponibles; si no, usa los testimonios con consentimiento
+  const reviews = (data?.reviews?.length > 0) ? data.reviews : (data ? FALLBACK_REVIEWS : [])
   const total   = reviews.length
 
   const go = useCallback((index) => {
@@ -121,8 +158,8 @@ export default function Testimonials() {
                       />
                     ) : (
                       <div
-                        className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0"
-                        style={{ backgroundColor: "#E8DDD0", color: "var(--color-deep)" }}
+                        className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0 ${reviews[current].authorColor ?? ""}`}
+                        style={!reviews[current].authorColor ? { backgroundColor: "#E8DDD0", color: "var(--color-deep)" } : {}}
                       >
                         {reviews[current].authorName[0]}
                       </div>
