@@ -21,7 +21,7 @@
   - *Aceptación:* el HTML de producción contiene el contenido sin ejecutar JS.
 - [x] **`feat/seo-head`** — `lang="es-MX"`, `<title>` real, meta description, Open Graph/Twitter, canonical, favicon propio, `robots.txt`, `sitemap.xml`, JSON-LD `Psychologist` + `AggregateRating`.
   - *Aceptación:* validación en Rich Results Test sin errores; OG se ve bien al compartir por WhatsApp.
-- [ ] **`feat/google-reviews`** — Pages Function `/api/reviews` (server-side, fieldMask mínimo) + Workers KV (TTL 24 h) + atribución a Google. Sustituir testimonios ficticios.
+- [x] **`feat/google-reviews`** — Pages Function `/api/reviews` (server-side, fieldMask mínimo) + Workers KV (TTL 24 h) + atribución a Google. Sustituir testimonios ficticios.
   - *Aceptación:* muestra reseñas reales con rating agregado; API key no expuesta; cumple ToS.
 - [x] **`chore/images`** — Reemplazar imágenes de Unsplash por archivos locales en AVIF/WebP con `width/height`, `loading="lazy"` (salvo LCP) y `fetchpriority="high"` en el Hero.
   - *Aceptación:* sin dependencias externas; CLS < 0.1.

@@ -94,4 +94,11 @@
 - Notas: Lint y build pasan con Vite 8.0.16. Las dependencias vulnerables (picomatch, flatted, postcss, brace-expansion) siguen presentes en devDeps — son herramientas de desarrollo, no afectan producción.
 - Siguiente: `feat/google-reviews` (requiere API key Google Places + Cloudflare KV) y `chore/deploy` (requiere dominio + cuenta Cloudflare) — pendientes de recursos externos.
 
+## 2026-06-01 — feat/google-reviews
+
+- Rama: `feat/google-reviews` · PR: pendiente · Estado: listo para merge
+- Hecho: place_id obtenido vía Places API (New): `ChIJ1Su43dXfzYURdidDiRKCxLU` (rating 5.0, 2 reseñas). Creada `functions/api/reviews.js` (Cloudflare Pages Function) — proxy server-side con fieldMask mínimo, caché KV 24h opcional y atribución a Google. API key vive en env var de Cloudflare, nunca en código. Testimonials.jsx reescrito: muestra AggregateRating real (5.0 ★, 2 reseñas), slider de reseñas si la API las devuelve, CTA "Dejar reseña" si no hay texto disponible. JSON-LD actualizado con AggregateRating real. wrangler.toml y .dev.vars.example documentados. .dev.vars añadido a .gitignore.
+- Notas: la API de Places no devuelve texto de las 2 reseñas actuales (umbral de calidad de Google — cuentas con poca actividad). El componente maneja esto con fallback elegante. Cuando haya más reseñas de cuentas activas, el slider aparecerá automáticamente.
+- Siguiente: `chore/deploy` — conectar a Cloudflare Pages para demo en `*.pages.dev`.
+
 <!-- nuevas entradas debajo de esta línea -->
