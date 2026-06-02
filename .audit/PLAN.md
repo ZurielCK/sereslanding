@@ -27,7 +27,7 @@
   - *Aceptación:* sin dependencias externas; CLS < 0.1.
 - [x] **`feat/map-facade`** — Mapa diferido (imagen/facade) que carga el iframe solo al clic + botón "Cómo llegar" (Maps nativo con coordenadas reales).
   - *Aceptación:* el iframe no se carga en el render inicial; coordenadas 18.9090, -99.2313.
-- [ ] **`chore/deploy`** — Conectar repo a Cloudflare Pages + dominio + analítica sin cookies (Cloudflare Web Analytics o Plausible).
+- [x] **`chore/deploy`** — Conectar repo a Cloudflare Pages + dominio + analítica sin cookies (Cloudflare Web Analytics o Plausible).
   - *Aceptación:* producción en vivo; preview deploys por PR funcionando.
 - [x] **`chore/pin-deps`** — Fijar versiones estables (salir de Vite 8 beta) antes del lanzamiento.
 

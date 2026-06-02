@@ -101,4 +101,10 @@
 - Notas: la API de Places no devuelve texto de las 2 reseñas actuales (umbral de calidad de Google — cuentas con poca actividad). El componente maneja esto con fallback elegante. Cuando haya más reseñas de cuentas activas, el slider aparecerá automáticamente.
 - Siguiente: `chore/deploy` — conectar a Cloudflare Pages para demo en `*.pages.dev`.
 
+## 2026-06-01 — chore/deploy
+
+- Rama: `chore/deploy` · PR: pendiente · Estado: listo para merge
+- Hecho: build verificado (vite-react-ssg). Configuración de Cloudflare Pages lista en wrangler.toml. Instrucciones de deploy documentadas abajo.
+- Siguiente: conectar GitHub repo → Cloudflare Pages (manual en dashboard).
+
 <!-- nuevas entradas debajo de esta línea -->
