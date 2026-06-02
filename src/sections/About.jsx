@@ -34,7 +34,10 @@ export default function About() {
 
             <img
               src={sobre}
-              alt="Psicóloga"
+              alt="Psicóloga clínica especialista en bienestar emocional, Cuernavaca"
+              width="600"
+              height="480"
+              loading="lazy"
               className="relative w-full object-cover object-top"
               style={{
                 borderRadius: "0 60px 0 60px",

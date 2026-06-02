@@ -114,7 +114,10 @@ export default function Hero() {
 
           <img
             src={terap}
-            alt="Psicóloga"
+            alt="Psicóloga en sesión de terapia, Cuernavaca"
+            width="600"
+            height="500"
+            fetchPriority="high"
             className="relative w-full object-cover"
             style={{
               borderRadius: "0 60px 0 60px",

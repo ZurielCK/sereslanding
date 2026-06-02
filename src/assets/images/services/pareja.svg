@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480" width="700" height="480">
+  <rect width="700" height="480" fill="#E8DDD0"/>
+  <rect x="0" y="0" width="700" height="480" fill="#8A9E7C" opacity="0.1"/>
+  <ellipse cx="295" cy="175" rx="35" ry="35" fill="none" stroke="#8A9E7C" stroke-width="2" opacity="0.6"/>
+  <ellipse cx="405" cy="175" rx="35" ry="35" fill="none" stroke="#8A9E7C" stroke-width="2" opacity="0.6"/>
+  <path d="M230 280 Q295 248 360 270 Q405 248 470 280 L470 315 Q405 348 360 326 Q295 348 230 315 Z" fill="none" stroke="#8A9E7C" stroke-width="2" opacity="0.5"/>
+  <text x="350" y="360" font-family="Georgia, serif" font-size="18" fill="#2C3E2D" text-anchor="middle" opacity="0.7">Terapia de pareja</text>
+  <text x="350" y="388" font-family="Georgia, serif" font-size="12" fill="#6B7067" text-anchor="middle" opacity="0.6">Imagen pendiente</text>
+</svg>

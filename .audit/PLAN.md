@@ -23,7 +23,7 @@
   - *Aceptación:* validación en Rich Results Test sin errores; OG se ve bien al compartir por WhatsApp.
 - [ ] **`feat/google-reviews`** — Pages Function `/api/reviews` (server-side, fieldMask mínimo) + Workers KV (TTL 24 h) + atribución a Google. Sustituir testimonios ficticios.
   - *Aceptación:* muestra reseñas reales con rating agregado; API key no expuesta; cumple ToS.
-- [ ] **`chore/images`** — Reemplazar imágenes de Unsplash por archivos locales en AVIF/WebP con `width/height`, `loading="lazy"` (salvo LCP) y `fetchpriority="high"` en el Hero.
+- [x] **`chore/images`** — Reemplazar imágenes de Unsplash por archivos locales en AVIF/WebP con `width/height`, `loading="lazy"` (salvo LCP) y `fetchpriority="high"` en el Hero.
   - *Aceptación:* sin dependencias externas; CLS < 0.1.
 - [ ] **`feat/map-facade`** — Mapa diferido (imagen/facade) que carga el iframe solo al clic + botón "Cómo llegar" (Maps nativo con coordenadas reales).
   - *Aceptación:* el iframe no se carga en el render inicial; coordenadas 18.9090, -99.2313.

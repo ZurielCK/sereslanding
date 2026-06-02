@@ -73,4 +73,11 @@
 - Notas: `npm run dev` sigue usando Vite normal — vite-react-ssg sólo actúa en build. Lint y build pasan.
 - Siguiente: `chore/images` — reemplazar imágenes de Unsplash por archivos locales.
 
+## 2026-06-01 — chore/images
+
+- Rama: `chore/images` · PR: pendiente · Estado: listo para merge
+- Hecho: creados 4 SVG placeholder en `src/assets/images/services/` (ansiedad, individual, pareja, crecimiento) con paleta del sitio. Services.jsx actualizado para importar archivos locales en vez de URLs de Unsplash. Atributos de imagen: `width`/`height` en todas, `loading="lazy"` en servicios/about/education, `fetchPriority="high"` en Hero (LCP). Alt texts descriptivos con contexto local (Cuernavaca). Borrado `react.svg` boilerplate de Vite.
+- Notas: los SVG son placeholders — reemplazar por fotos reales de la psicóloga antes del lanzamiento. Lint y build pasan sin warnings.
+- Siguiente: `feat/map-facade` — mapa diferido con botón Cómo llegar.
+
 <!-- nuevas entradas debajo de esta línea -->

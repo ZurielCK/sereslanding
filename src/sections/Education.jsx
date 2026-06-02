@@ -31,7 +31,10 @@ export default function Education() {
 
             <img
               src={formacionImg}
-              alt="Formación profesional"
+              alt="Formación y especialización profesional en psicoterapia corporal humanista"
+              width="600"
+              height="480"
+              loading="lazy"
               className="relative w-full object-cover"
               style={{
                 borderRadius: "0 60px 0 60px",

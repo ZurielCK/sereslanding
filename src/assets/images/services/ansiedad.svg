@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480" width="700" height="480">
+  <rect width="700" height="480" fill="#E8DDD0"/>
+  <rect x="0" y="0" width="700" height="480" fill="#8A9E7C" opacity="0.15"/>
+  <circle cx="350" cy="200" r="70" fill="none" stroke="#8A9E7C" stroke-width="2" opacity="0.6"/>
+  <circle cx="350" cy="200" r="45" fill="none" stroke="#8A9E7C" stroke-width="1.5" opacity="0.4"/>
+  <line x1="350" y1="140" x2="350" y2="260" stroke="#8A9E7C" stroke-width="1.5" opacity="0.4"/>
+  <line x1="290" y1="200" x2="410" y2="200" stroke="#8A9E7C" stroke-width="1.5" opacity="0.4"/>
+  <text x="350" y="320" font-family="Georgia, serif" font-size="18" fill="#2C3E2D" text-anchor="middle" opacity="0.7">Ansiedad y estrés</text>
+  <text x="350" y="348" font-family="Georgia, serif" font-size="12" fill="#6B7067" text-anchor="middle" opacity="0.6">Imagen pendiente</text>
+</svg>

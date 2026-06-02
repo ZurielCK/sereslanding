@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480" width="700" height="480">
+  <rect width="700" height="480" fill="#E8DDD0"/>
+  <rect x="0" y="0" width="700" height="480" fill="#2C3E2D" opacity="0.08"/>
+  <ellipse cx="350" cy="175" rx="40" ry="40" fill="none" stroke="#8A9E7C" stroke-width="2" opacity="0.6"/>
+  <path d="M270 280 Q350 240 430 280 L430 320 Q350 360 270 320 Z" fill="none" stroke="#8A9E7C" stroke-width="2" opacity="0.5"/>
+  <text x="350" y="350" font-family="Georgia, serif" font-size="18" fill="#2C3E2D" text-anchor="middle" opacity="0.7">Terapia individual</text>
+  <text x="350" y="378" font-family="Georgia, serif" font-size="12" fill="#6B7067" text-anchor="middle" opacity="0.6">Imagen pendiente</text>
+</svg>

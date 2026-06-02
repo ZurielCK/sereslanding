@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480" width="700" height="480">
+  <rect width="700" height="480" fill="#E8DDD0"/>
+  <rect x="0" y="0" width="700" height="480" fill="#2C3E2D" opacity="0.06"/>
+  <path d="M350 130 L350 290" stroke="#8A9E7C" stroke-width="2" opacity="0.5"/>
+  <path d="M350 200 Q310 170 280 185" stroke="#8A9E7C" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M350 230 Q390 200 420 215" stroke="#8A9E7C" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M350 260 Q305 235 275 250" stroke="#8A9E7C" stroke-width="2" fill="none" opacity="0.5"/>
+  <ellipse cx="350" cy="125" rx="12" ry="12" fill="#8A9E7C" opacity="0.4"/>
+  <text x="350" y="335" font-family="Georgia, serif" font-size="18" fill="#2C3E2D" text-anchor="middle" opacity="0.7">Crecimiento personal</text>
+  <text x="350" y="363" font-family="Georgia, serif" font-size="12" fill="#6B7067" text-anchor="middle" opacity="0.6">Imagen pendiente</text>
+</svg>

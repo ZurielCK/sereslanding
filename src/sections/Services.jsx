@@ -1,30 +1,34 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
+import imgAnsiedad    from "../assets/images/services/ansiedad.svg";
+import imgIndividual  from "../assets/images/services/individual.svg";
+import imgPareja      from "../assets/images/services/pareja.svg";
+import imgCrecimiento from "../assets/images/services/crecimiento.svg";
 
 const services = [
   {
     num: "01",
     title: "Ansiedad y estrés",
     text: "Aprende a gestionar pensamientos y emociones que generan estrés o preocupación constante.",
-    img: "https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=700&q=80",
+    img: imgAnsiedad,
   },
   {
     num: "02",
     title: "Terapia individual",
     text: "Un espacio seguro para comprender tus emociones y trabajar en tu crecimiento personal.",
-    img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=700&q=80",
+    img: imgIndividual,
   },
   {
     num: "03",
     title: "Terapia de pareja",
     text: "Mejora la comunicación y fortalece la conexión en tu relación de pareja.",
-    img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&q=80",
+    img: imgPareja,
   },
   {
     num: "04",
     title: "Crecimiento personal",
     text: "Desarrolla herramientas para mejorar tu bienestar emocional y tu vida diaria.",
-    img: "https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=700&q=80",
+    img: imgCrecimiento,
   },
 ];
 
@@ -143,6 +147,9 @@ export default function Services() {
                     <img
                       src={s.img}
                       alt={s.title}
+                      width="700"
+                      height="480"
+                      loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div
