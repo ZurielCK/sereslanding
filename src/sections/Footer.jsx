@@ -2,8 +2,8 @@ import {
   FaInstagram,
   FaFacebook,
   FaWhatsapp,
-  FaMapMarkerAlt,
 } from "react-icons/fa";
+import MapFacade from "../components/MapFacade";
 
 export default function Footer() {
   return (
@@ -47,17 +47,12 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-lg">Contacto</h4>
 
-          {/* Ubicación */}
+          <p className="mt-3 text-sm text-gray-400">
+            Cuernavaca, Morelos · Presencial y en línea
+          </p>
 
-          <a
-            href="https://g.page/r/CXYnQ4kSgsS1EAE/review"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 mt-4 text-gray-400 hover:text-white transition"
-          >
-            <FaMapMarkerAlt />
-            Ver ubicación del consultorio
-          </a>
+          {/* Mapa con facade — el iframe carga solo al clic */}
+          <MapFacade />
 
           {/* Redes */}
 

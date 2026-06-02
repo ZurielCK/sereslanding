@@ -80,4 +80,11 @@
 - Notas: los SVG son placeholders — reemplazar por fotos reales de la psicóloga antes del lanzamiento. Lint y build pasan sin warnings.
 - Siguiente: `feat/map-facade` — mapa diferido con botón Cómo llegar.
 
+## 2026-06-01 — feat/map-facade
+
+- Rama: `feat/map-facade` · PR: pendiente · Estado: listo para merge
+- Hecho: creado componente `MapFacade.jsx` — muestra botón facade hasta que el usuario hace clic, momento en que carga el iframe de Google Maps Embed (coordenadas reales 18.9090, -99.2313). Botón "Cómo llegar" abre Maps nativo (`/maps/dir/?api=1&destination=...`). Integrado en Footer columna Contacto, reemplazando el enlace estático anterior.
+- Notas: el iframe NO se carga en el render inicial → 0 impacto en Core Web Vitals del primer pintado. El facade usa la paleta del sitio. Lint y build pasan.
+- Siguiente: `chore/pin-deps` — verificar si Vite 8 ya tiene release estable.
+
 <!-- nuevas entradas debajo de esta línea -->

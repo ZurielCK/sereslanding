@@ -25,7 +25,7 @@
   - *Aceptación:* muestra reseñas reales con rating agregado; API key no expuesta; cumple ToS.
 - [x] **`chore/images`** — Reemplazar imágenes de Unsplash por archivos locales en AVIF/WebP con `width/height`, `loading="lazy"` (salvo LCP) y `fetchpriority="high"` en el Hero.
   - *Aceptación:* sin dependencias externas; CLS < 0.1.
-- [ ] **`feat/map-facade`** — Mapa diferido (imagen/facade) que carga el iframe solo al clic + botón "Cómo llegar" (Maps nativo con coordenadas reales).
+- [x] **`feat/map-facade`** — Mapa diferido (imagen/facade) que carga el iframe solo al clic + botón "Cómo llegar" (Maps nativo con coordenadas reales).
   - *Aceptación:* el iframe no se carga en el render inicial; coordenadas 18.9090, -99.2313.
 - [ ] **`chore/deploy`** — Conectar repo a Cloudflare Pages + dominio + analítica sin cookies (Cloudflare Web Analytics o Plausible).
   - *Aceptación:* producción en vivo; preview deploys por PR funcionando.
