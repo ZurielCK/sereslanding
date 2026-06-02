@@ -26,7 +26,10 @@ export async function onRequestGet({ env }) {
 
   if (!API_KEY) {
     return new Response(
-      JSON.stringify({ error: "API key no configurada" }),
+      JSON.stringify({
+        error: "API key no configurada",
+        debug: `env keys disponibles: ${Object.keys(env).join(", ") || "ninguna"}`,
+      }),
       { status: 500, headers: CORS }
     );
   }
