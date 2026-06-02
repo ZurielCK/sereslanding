@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="600" height="480">
+  <rect width="600" height="480" fill="#E8DDD0"/>
+  <rect x="0" y="0" width="600" height="480" fill="#2C3E2D" opacity="0.06"/>
+  <!-- Marco de diploma decorativo -->
+  <rect x="180" y="120" width="240" height="180" rx="4" fill="none" stroke="#8A9E7C" stroke-width="1.5" opacity="0.5"/>
+  <rect x="190" y="130" width="220" height="160" rx="2" fill="none" stroke="#8A9E7C" stroke-width="0.8" opacity="0.3"/>
+  <!-- Líneas de texto del diploma -->
+  <line x1="220" y1="165" x2="380" y2="165" stroke="#8A9E7C" stroke-width="1.5" opacity="0.5"/>
+  <line x1="240" y1="185" x2="360" y2="185" stroke="#8A9E7C" stroke-width="1" opacity="0.35"/>
+  <line x1="250" y1="200" x2="350" y2="200" stroke="#8A9E7C" stroke-width="1" opacity="0.35"/>
+  <line x1="235" y1="230" x2="365" y2="230" stroke="#8A9E7C" stroke-width="1" opacity="0.3"/>
+  <line x1="255" y1="245" x2="345" y2="245" stroke="#8A9E7C" stroke-width="1" opacity="0.3"/>
+  <!-- Sello circular -->
+  <circle cx="300" cy="270" r="18" fill="none" stroke="#8A9E7C" stroke-width="1.5" opacity="0.45"/>
+  <circle cx="300" cy="270" r="12" fill="none" stroke="#8A9E7C" stroke-width="1" opacity="0.3"/>
+  <!-- Texto placeholder -->
+  <text x="300" y="360" font-family="Georgia, serif" font-size="14" fill="#2C3E2D" text-anchor="middle" opacity="0.55">Foto de consulta</text>
+  <text x="300" y="382" font-family="Georgia, serif" font-size="11" fill="#6B7067" text-anchor="middle" opacity="0.5">Imagen pendiente</text>
+</svg>
