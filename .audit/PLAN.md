@@ -29,7 +29,7 @@
   - *Aceptación:* el iframe no se carga en el render inicial; coordenadas 18.9090, -99.2313.
 - [ ] **`chore/deploy`** — Conectar repo a Cloudflare Pages + dominio + analítica sin cookies (Cloudflare Web Analytics o Plausible).
   - *Aceptación:* producción en vivo; preview deploys por PR funcionando.
-- [ ] **`chore/pin-deps`** — Fijar versiones estables (salir de Vite 8 beta) antes del lanzamiento.
+- [x] **`chore/pin-deps`** — Fijar versiones estables (salir de Vite 8 beta) antes del lanzamiento.
 
 ## 🔧 Fase 2 — tras el lanzamiento
 

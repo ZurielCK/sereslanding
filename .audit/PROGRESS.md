@@ -87,4 +87,11 @@
 - Notas: el iframe NO se carga en el render inicial → 0 impacto en Core Web Vitals del primer pintado. El facade usa la paleta del sitio. Lint y build pasan.
 - Siguiente: `chore/pin-deps` — verificar si Vite 8 ya tiene release estable.
 
+## 2026-06-01 — chore/pin-deps
+
+- Rama: `chore/pin-deps` · PR: pendiente · Estado: listo para merge
+- Hecho: Vite 8 salió de beta — `latest` en npm es `8.0.16`. Actualizado `package.json` de `^8.0.0-beta.13` a `^8.0.16`; eliminado el bloque `overrides` que forzaba la beta. `vite-react-ssg` queda en `^0.9.1-beta.1` porque es el único release disponible (no hay versión estable aún).
+- Notas: Lint y build pasan con Vite 8.0.16. Las dependencias vulnerables (picomatch, flatted, postcss, brace-expansion) siguen presentes en devDeps — son herramientas de desarrollo, no afectan producción.
+- Siguiente: `feat/google-reviews` (requiere API key Google Places + Cloudflare KV) y `chore/deploy` (requiere dominio + cuenta Cloudflare) — pendientes de recursos externos.
+
 <!-- nuevas entradas debajo de esta línea -->
