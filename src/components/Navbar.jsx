@@ -44,6 +44,7 @@ export default function Navbar() {
             { name: "Inicio", href: "#inicio" },
             { name: "Sobre mí", href: "#about" },
             { name: "Servicios", href: "#servicios" },
+            { name: "FAQ", href: "#faq" },
             { name: "Contacto", href: "#contacto" },
           ].map((item) => (
             <li key={item.name}>

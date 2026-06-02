@@ -36,7 +36,7 @@
 - [ ] **`feat/videos`** — Sección de videos (≤2 min) con YouTube + *facade* (póster, carga al clic).
 - [ ] **`feat/contact-form`** — Formulario corto de respaldo (nombre + motivo + horario) → correo/Formspree o Pages Function.
 - [ ] **`feat/booking`** — Reserva de citas (Cal.com / Calendly) además de WhatsApp.
-- [ ] **`feat/faq`** — Sección FAQ con `FAQPage` schema.
+- [x] **`feat/faq`** — Sección FAQ con `FAQPage` schema.
 - [x] **`feat/credentials`** — Hacer visibles titulaciones clave + cédula profesional + logos de instituciones.
 - [ ] **`feat/reviews-cron`** — Refresco programado de la caché de reseñas (Cron Trigger).
 
