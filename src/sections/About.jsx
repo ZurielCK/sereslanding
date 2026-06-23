@@ -50,10 +50,10 @@ export default function About() {
               className="absolute bottom-8 -right-4 md:-right-6 py-3 px-4 shadow-md"
               style={{
                 backgroundColor: "white",
-                borderLeft: "3px solid #8A9E7C",
+                borderLeft: "3px solid var(--color-accent)",
               }}
             >
-              <p className="text-xs tracking-widest uppercase mb-1" style={{ color: "#8A9E7C" }}>
+              <p className="text-xs tracking-widest uppercase mb-1" style={{ color: "var(--color-accent)" }}>
                 Consulta online
               </p>
               <p className="text-sm" style={{ color: "var(--color-deep)" }}>
@@ -69,7 +69,7 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <p className="text-xs tracking-[.22em] uppercase mb-3" style={{ color: "#8A9E7C" }}>
+            <p className="text-xs tracking-[.22em] uppercase mb-3" style={{ color: "var(--color-accent)" }}>
               Sobre la psicóloga
             </p>
 
@@ -84,12 +84,12 @@ export default function About() {
               }}
             >
               Un espacio de{" "}
-              <em style={{ fontStyle: "italic", color: "#8A9E7C" }}>confianza</em>
+              <em style={{ fontStyle: "italic", color: "var(--color-accent)" }}>confianza</em>
               {" "}y<br />transformación
             </h2>
 
             {/* Línea decorativa */}
-            <div className="w-9 h-px mb-5" style={{ backgroundColor: "#8A9E7C" }} />
+            <div className="w-9 h-px mb-5" style={{ backgroundColor: "var(--color-accent)" }} />
 
             <p className="text-sm leading-relaxed font-light mb-3" style={{ color: "var(--color-muted)" }}>
               Soy psicóloga clínica especializada en bienestar emocional, ansiedad y desarrollo
@@ -108,7 +108,7 @@ export default function About() {
                 <span
                   key={e}
                   className="text-xs tracking-widest uppercase px-3 py-1.5 border"
-                  style={{ borderColor: "#8A9E7C", color: "#8A9E7C" }}
+                  style={{ borderColor: "var(--color-accent)", color: "var(--color-accent)" }}
                 >
                   {e}
                 </span>

@@ -17,7 +17,7 @@ export default function Hero() {
         >
           <p
             className="text-xs tracking-[.22em] uppercase mb-4"
-            style={{ color: "#8A9E7C" }}
+            style={{ color: "var(--color-accent)" }}
           >
             Psicoterapia profesional
           </p>
@@ -33,7 +33,7 @@ export default function Hero() {
             }}
           >
             Encuentra{" "}
-            <em style={{ fontStyle: "italic", color: "#8A9E7C" }}>
+            <em style={{ fontStyle: "italic", color: "var(--color-accent)" }}>
               equilibrio emocional
             </em>
           </h1>
@@ -41,7 +41,7 @@ export default function Hero() {
           {/* Línea decorativa */}
           <div
             className="w-10 h-px mb-6"
-            style={{ backgroundColor: "#8A9E7C" }}
+            style={{ backgroundColor: "var(--color-accent)" }}
           />
 
           <p
@@ -86,8 +86,8 @@ export default function Hero() {
               transition={{ duration: 0.2 }}
               className="inline-flex items-center gap-3 px-7 py-3.5 text-xs tracking-widest uppercase border"
               style={{
-                borderColor: "#8A9E7C",
-                color: "#8A9E7C",
+                borderColor: "var(--color-accent)",
+                color: "var(--color-accent)",
                 letterSpacing: "0.14em",
               }}
             >
@@ -130,12 +130,12 @@ export default function Hero() {
             className="absolute bottom-8 -left-4 md:-left-6 py-3 px-4 shadow-md"
             style={{
               backgroundColor: "white",
-              borderLeft: "3px solid #8A9E7C",
+              borderLeft: "3px solid var(--color-accent)",
             }}
           >
             <p
               className="text-xs tracking-widest uppercase mb-1"
-              style={{ color: "#8A9E7C" }}
+              style={{ color: "var(--color-accent)" }}
             >
               Atención personalizada
             </p>

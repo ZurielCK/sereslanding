@@ -57,7 +57,7 @@ function FAQItem({ item, index }) {
         >
           <motion.svg
             width="12" height="12" viewBox="0 0 24 24"
-            fill="none" stroke={open ? "white" : "#8A9E7C"} strokeWidth="2.5"
+            fill="none" stroke={open ? "white" : "var(--color-accent)"} strokeWidth="2.5"
             animate={{ rotate: open ? 180 : 0 }}
             transition={{ duration: 0.25 }}
           >
@@ -100,7 +100,7 @@ export default function FAQ() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <p className="text-xs tracking-[.22em] uppercase mb-3" style={{ color: "#8A9E7C" }}>
+          <p className="text-xs tracking-[.22em] uppercase mb-3" style={{ color: "var(--color-accent)" }}>
             Resolvemos tus dudas
           </p>
           <h2
@@ -108,7 +108,7 @@ export default function FAQ() {
             style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, color: "var(--color-deep)" }}
           >
             Preguntas{" "}
-            <em style={{ fontStyle: "italic", color: "#8A9E7C" }}>frecuentes</em>
+            <em style={{ fontStyle: "italic", color: "var(--color-accent)" }}>frecuentes</em>
           </h2>
           <p className="text-sm font-light" style={{ color: "var(--color-muted)" }}>
             ¿Tienes otra pregunta? Escríbeme por WhatsApp.

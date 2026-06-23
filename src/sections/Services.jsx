@@ -84,7 +84,7 @@ export default function Services() {
         >
           <p
             className="text-xs tracking-[.22em] uppercase mb-3"
-            style={{ color: "#8A9E7C" }}
+            style={{ color: "var(--color-accent)" }}
           >
             Servicios terapéuticos
           </p>
@@ -98,7 +98,7 @@ export default function Services() {
             }}
           >
             ¿En qué puedo{" "}
-            <em style={{ fontStyle: "italic", color: "#8A9E7C" }}>ayudarte?</em>
+            <em style={{ fontStyle: "italic", color: "var(--color-accent)" }}>ayudarte?</em>
           </h2>
           <p
             className="text-sm font-light"
@@ -154,7 +154,7 @@ export default function Services() {
                     />
                     <div
                       className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0"
-                      style={{ backgroundColor: "rgba(44,62,45,0.25)" }}
+                      style={{ backgroundColor: "var(--color-overlay)" }}
                     />
                     <span
                       className="absolute top-3 left-4 text-sm"
@@ -171,7 +171,7 @@ export default function Services() {
                   <div className="p-5">
                     <p
                       className="text-xs tracking-widest uppercase mb-2"
-                      style={{ color: "#8A9E7C" }}
+                      style={{ color: "var(--color-accent)" }}
                     >
                       Área de atención
                     </p>
@@ -193,7 +193,7 @@ export default function Services() {
                     </p>
                     <div
                       className="flex items-center gap-2 text-xs tracking-widest uppercase"
-                      style={{ color: "#8A9E7C" }}
+                      style={{ color: "var(--color-accent)" }}
                     >
                       <span>Saber más</span>
                       <svg
@@ -201,7 +201,7 @@ export default function Services() {
                         height="13"
                         viewBox="0 0 24 24"
                         fill="none"
-                        stroke="#8A9E7C"
+                        stroke="var(--color-accent)"
                         strokeWidth="1.8"
                         className="transition-transform duration-200 group-hover:translate-x-1"
                       >
@@ -213,7 +213,7 @@ export default function Services() {
                   {/* Línea inferior animada */}
                   <div
                     className="absolute bottom-0 left-0 w-full h-0.5 origin-left scale-x-0 transition-transform duration-400 group-hover:scale-x-100"
-                    style={{ backgroundColor: "#8A9E7C" }}
+                    style={{ backgroundColor: "var(--color-accent)" }}
                   />
                 </motion.div>
               </div>
@@ -227,7 +227,7 @@ export default function Services() {
             onClick={() => go(cur - 1)}
             disabled={cur === 0}
             className="w-9 h-9 rounded-full border flex items-center justify-center transition-colors hover:bg-gray-50 disabled:opacity-30"
-            style={{ borderColor: "#D0D0D0" }}
+            style={{ borderColor: "var(--color-neutral)" }}
             aria-label="Anterior"
           >
             <svg
@@ -250,7 +250,7 @@ export default function Services() {
                 className="h-1.5 rounded-full transition-all duration-300"
                 style={{
                   width: i === cur ? "22px" : "7px",
-                  backgroundColor: i === cur ? "#8A9E7C" : "#D0D0D0",
+                  backgroundColor: i === cur ? "var(--color-accent)" : "var(--color-neutral)",
                 }}
                 aria-label={`Página ${i + 1}`}
               />
@@ -261,7 +261,7 @@ export default function Services() {
             onClick={() => go(cur + 1)}
             disabled={cur >= pages - 1}
             className="w-9 h-9 rounded-full border flex items-center justify-center transition-colors hover:bg-gray-50 disabled:opacity-30"
-            style={{ borderColor: "#D0D0D0" }}
+            style={{ borderColor: "var(--color-neutral)" }}
             aria-label="Siguiente"
           >
             <svg

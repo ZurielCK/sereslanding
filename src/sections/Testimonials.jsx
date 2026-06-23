@@ -44,7 +44,7 @@ function Stars({ rating = 5, size = 13 }) {
   return (
     <div className="flex gap-1" aria-label={`${rating} de 5 estrellas`}>
       {[...Array(5)].map((_, i) => (
-        <FaStar key={i} size={size} style={{ color: i < Math.round(rating) ? "#8A9E7C" : "#D0D0D0" }} />
+        <FaStar key={i} size={size} style={{ color: i < Math.round(rating) ? "var(--color-accent)" : "var(--color-neutral)" }} />
       ))}
     </div>
   )
@@ -99,7 +99,7 @@ export default function Testimonials() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <p className="text-xs tracking-[.22em] uppercase mb-3" style={{ color: "#8A9E7C" }}>
+          <p className="text-xs tracking-[.22em] uppercase mb-3" style={{ color: "var(--color-accent)" }}>
             Testimonios
           </p>
           <h2
@@ -107,7 +107,7 @@ export default function Testimonials() {
             style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, color: "var(--color-deep)" }}
           >
             Lo que dicen{" "}
-            <em style={{ fontStyle: "italic", color: "#8A9E7C" }}>nuestros pacientes</em>
+            <em style={{ fontStyle: "italic", color: "var(--color-accent)" }}>nuestros pacientes</em>
           </h2>
           <p className="text-sm font-light" style={{ color: "var(--color-muted)" }}>
             Reseñas verificadas de Google
@@ -135,19 +135,19 @@ export default function Testimonials() {
                   exit="exit"
                   transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
                   className="relative border-l-2 p-8"
-                  style={{ backgroundColor: "white", borderLeftColor: "#8A9E7C", borderRadius: "0 12px 12px 0" }}
+                  style={{ backgroundColor: "white", borderLeftColor: "var(--color-accent)", borderRadius: "0 12px 12px 0" }}
                 >
                   <div className="mb-4">
                     <Stars rating={reviews[current].rating} />
                   </div>
 
-                  <FaQuoteLeft className="mb-3 opacity-20" style={{ color: "#8A9E7C", fontSize: "2rem" }} />
+                  <FaQuoteLeft className="mb-3 opacity-20" style={{ color: "var(--color-accent)", fontSize: "2rem" }} />
 
                   <p className="text-sm leading-relaxed italic mb-6 font-light" style={{ color: "var(--color-muted)" }}>
                     {reviews[current].text}
                   </p>
 
-                  <div className="flex items-center gap-3 pt-5 border-t" style={{ borderColor: "#E8DDD0" }}>
+                  <div className="flex items-center gap-3 pt-5 border-t" style={{ borderColor: "var(--color-warm)" }}>
                     {reviews[current].authorPhoto ? (
                       <img
                         src={reviews[current].authorPhoto}
@@ -159,7 +159,7 @@ export default function Testimonials() {
                     ) : (
                       <div
                         className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0 ${reviews[current].authorColor ?? ""}`}
-                        style={!reviews[current].authorColor ? { backgroundColor: "#E8DDD0", color: "var(--color-deep)" } : {}}
+                        style={!reviews[current].authorColor ? { backgroundColor: "var(--color-warm)", color: "var(--color-deep)" } : {}}
                       >
                         {reviews[current].authorName[0]}
                       </div>
@@ -172,8 +172,8 @@ export default function Testimonials() {
                         {reviews[current].authorName}
                       </p>
                       <div className="flex items-center gap-2">
-                        <FaGoogle size={10} style={{ color: "#8A9E7C" }} />
-                        <p className="text-xs tracking-wider uppercase" style={{ color: "#8A9E7C" }}>
+                        <FaGoogle size={10} style={{ color: "var(--color-accent)" }} />
+                        <p className="text-xs tracking-wider uppercase" style={{ color: "var(--color-accent)" }}>
                           Reseña verificada · Google
                         </p>
                       </div>
@@ -189,7 +189,7 @@ export default function Testimonials() {
                 <button
                   onClick={() => go(current - 1)}
                   className="w-9 h-9 rounded-full border flex items-center justify-center transition-colors hover:bg-gray-50"
-                  style={{ borderColor: "#D0D0D0" }}
+                  style={{ borderColor: "var(--color-neutral)" }}
                   aria-label="Anterior"
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -204,7 +204,7 @@ export default function Testimonials() {
                       className="h-2 rounded-full transition-all duration-300"
                       style={{
                         width: i === current ? "24px" : "8px",
-                        backgroundColor: i === current ? "#8A9E7C" : "#D0D0D0",
+                        backgroundColor: i === current ? "var(--color-accent)" : "var(--color-neutral)",
                       }}
                       aria-label={`Reseña ${i + 1}`}
                     />
@@ -213,7 +213,7 @@ export default function Testimonials() {
                 <button
                   onClick={() => go(current + 1)}
                   className="w-9 h-9 rounded-full border flex items-center justify-center transition-colors hover:bg-gray-50"
-                  style={{ borderColor: "#D0D0D0" }}
+                  style={{ borderColor: "var(--color-neutral)" }}
                   aria-label="Siguiente"
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -232,7 +232,7 @@ export default function Testimonials() {
             {/* Badge de rating grande */}
             <div
               className="flex items-center gap-6 px-10 py-7 w-full max-w-sm"
-              style={{ backgroundColor: "white", borderLeft: "3px solid #8A9E7C", borderRadius: "0 12px 12px 0" }}
+              style={{ backgroundColor: "white", borderLeft: "3px solid var(--color-accent)", borderRadius: "0 12px 12px 0" }}
             >
               <p
                 style={{
@@ -251,8 +251,8 @@ export default function Testimonials() {
                   {data.userRatingCount ?? 0} reseñas en Google
                 </p>
                 <div className="flex items-center gap-1 mt-1">
-                  <FaGoogle size={10} style={{ color: "#8A9E7C" }} />
-                  <span className="text-xs tracking-wider uppercase" style={{ color: "#8A9E7C" }}>
+                  <FaGoogle size={10} style={{ color: "var(--color-accent)" }} />
+                  <span className="text-xs tracking-wider uppercase" style={{ color: "var(--color-accent)" }}>
                     Verificadas
                   </span>
                 </div>

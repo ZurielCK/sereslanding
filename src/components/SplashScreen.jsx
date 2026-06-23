@@ -2,7 +2,7 @@ import logo from "../assets/images/Logo.png";
 
 export default function SplashScreen() {
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-white to-[#e8f7fb] z-[999]">
+    <div className="fixed inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-white to-[var(--color-cream)] z-[999]">
       {/* Logo */}
 
       <img
@@ -13,13 +13,13 @@ export default function SplashScreen() {
 
       {/* Nombre */}
 
-      <h1 className="mt-6 text-xl md:text-2xl font-semibold text-[#20558d] tracking-wide">
+      <h1 className="mt-6 text-xl md:text-2xl font-semibold text-[var(--color-deep)] tracking-wide">
         SerEs Psicoterapia
       </h1>
 
       {/* Loader */}
 
-      <div className="mt-8 w-10 h-10 border-4 border-[#11b8d6] border-t-transparent rounded-full animate-spin"></div>
+      <div className="mt-8 w-10 h-10 border-4 border-[var(--color-accent)] border-t-transparent rounded-full animate-spin"></div>
     </div>
   );
 }

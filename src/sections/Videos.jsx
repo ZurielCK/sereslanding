@@ -119,7 +119,7 @@ export default function Videos() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <p className="text-xs tracking-[.22em] uppercase mb-3" style={{ color: "#8A9E7C" }}>
+          <p className="text-xs tracking-[.22em] uppercase mb-3" style={{ color: "var(--color-accent)" }}>
             Contenido
           </p>
           <h2
@@ -127,7 +127,7 @@ export default function Videos() {
             style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, color: "var(--color-deep)" }}
           >
             Videos y{" "}
-            <em style={{ fontStyle: "italic", color: "#8A9E7C" }}>consejos</em>
+            <em style={{ fontStyle: "italic", color: "var(--color-accent)" }}>consejos</em>
           </h2>
           <p className="text-sm font-light" style={{ color: "var(--color-muted)" }}>
             Recursos para tu bienestar emocional
@@ -177,7 +177,7 @@ export default function Videos() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 text-xs tracking-widest uppercase border transition-opacity hover:opacity-70"
-                  style={{ borderColor: "#8A9E7C", color: "#8A9E7C" }}
+                  style={{ borderColor: "var(--color-accent)", color: "var(--color-accent)" }}
                 >
                   <FaFacebook />
                   Facebook

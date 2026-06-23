@@ -13,7 +13,7 @@ export default function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-xs tracking-[.22em] uppercase mb-4"
-          style={{ color: "#8A9E7C" }}
+          style={{ color: "var(--color-accent)" }}
         >
           Da el primer paso
         </motion.p>
@@ -31,7 +31,7 @@ export default function CTA() {
           }}
         >
           Agenda tu{" "}
-          <em style={{ fontStyle: "italic", color: "#8A9E7C" }}>
+          <em style={{ fontStyle: "italic", color: "var(--color-accent)" }}>
             primera sesión
           </em>
         </motion.h2>
@@ -39,7 +39,7 @@ export default function CTA() {
         {/* Línea decorativa */}
         <div
           className="w-10 h-px mx-auto mb-6"
-          style={{ backgroundColor: "#8A9E7C" }}
+          style={{ backgroundColor: "var(--color-accent)" }}
         />
 
         <motion.p
@@ -62,7 +62,7 @@ export default function CTA() {
           transition={{ duration: 0.2 }}
           className="inline-flex items-center gap-3 px-10 py-5 text-sm uppercase shadow-xl"
           style={{
-            backgroundColor: "#25D366", // color real de WhatsApp (reconocible)
+            backgroundColor: "var(--color-whatsapp)", // color real de WhatsApp (reconocible)
             color: "white",
             borderRadius: "999px",
             letterSpacing: "0.12em",

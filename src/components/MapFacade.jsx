@@ -59,7 +59,7 @@ export default function MapFacade() {
         target="_blank"
         rel="noopener noreferrer"
         className="mt-3 inline-flex items-center gap-2 text-xs tracking-widest uppercase transition-opacity hover:opacity-70"
-        style={{ color: "#8A9E7C" }}
+        style={{ color: "var(--color-accent)" }}
       >
         <FaDirections />
         Cómo llegar

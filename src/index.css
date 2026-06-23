@@ -1,10 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-deep:  #2C3E2D;
-  --color-cream: #FAF8F4;
-  --color-warm:  #E8DDD0;
-  --color-muted: #6B7067;
+  /* ── Paleta principal ─────────────────────────────── */
+  --color-deep:      #20558d;   /* azul marino — botones, títulos */
+  --color-cream:     #F0FBFD;   /* fondo claro — secciones */
+  --color-warm:      #C8E8F0;   /* azul suave — bordes, fondos de acento */
+  --color-muted:     #277580;   /* teal — texto secundario */
+  --color-accent:    #11b8d6;   /* cyan — etiquetas, énfasis, líneas */
+  --color-fresh:     #11e29d;   /* verde menta — disponible para CTAs */
+
+  /* ── Colores de soporte (se actualizan junto a la paleta) ── */
+  --color-neutral:   #D0D0D0;   /* gris — dots inactivos, bordes sutiles */
+  --color-whatsapp:  #25D366;   /* verde WhatsApp — no cambiar sin re-branding */
+  --color-overlay:   rgba(32, 85, 141, 0.25); /* sombra sobre imágenes (deriva de --color-deep) */
 }
 
 html {

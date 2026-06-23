@@ -69,7 +69,7 @@ export default function Education() {
             transition={{ duration: 0.7, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <p className="text-xs tracking-[.22em] uppercase mb-3" style={{ color: "#8A9E7C" }}>
+            <p className="text-xs tracking-[.22em] uppercase mb-3" style={{ color: "var(--color-accent)" }}>
               Trayectoria profesional
             </p>
 
@@ -83,10 +83,10 @@ export default function Education() {
               }}
             >
               Formación y{" "}
-              <em style={{ color: "#8A9E7C" }}>especialización</em>
+              <em style={{ color: "var(--color-accent)" }}>especialización</em>
             </h2>
 
-            <div className="w-9 h-px mb-8" style={{ backgroundColor: "#8A9E7C" }} />
+            <div className="w-9 h-px mb-8" style={{ backgroundColor: "var(--color-accent)" }} />
 
             {/* Tarjetas por categoría */}
             <div className="space-y-6">
@@ -100,7 +100,7 @@ export default function Education() {
                   className="border-l-2 pl-5"
                   style={{ borderColor: "var(--color-warm)" }}
                 >
-                  <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "#8A9E7C" }}>
+                  <p className="text-xs tracking-widest uppercase mb-3" style={{ color: "var(--color-accent)" }}>
                     {group.category}
                   </p>
                   <div className="space-y-3">
@@ -124,7 +124,7 @@ export default function Education() {
             {/* TODO: añadir número de cédula profesional SEP cuando esté disponible
             <div className="mt-8 flex items-center gap-3 px-4 py-3 border"
               style={{ borderColor: "var(--color-warm)" }}>
-              <span className="text-xs tracking-widest uppercase" style={{ color: "#8A9E7C" }}>
+              <span className="text-xs tracking-widest uppercase" style={{ color: "var(--color-accent)" }}>
                 Cédula profesional SEP
               </span>
               <span className="text-sm font-medium" style={{ color: "var(--color-deep)" }}>
